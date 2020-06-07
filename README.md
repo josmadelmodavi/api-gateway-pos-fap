@@ -17,31 +17,31 @@ Serão necessárias várias instâncias do terminal para executar o aplicativo.
 php -S localhost:8080
 ```
 
-**Terminal 02**: No diretório 'service-validar' execute o comando:
+**Terminal 02**: No diretório `service-validar/` execute o comando:
 
 ```
 php -S localhost:8081
 ```
 
-**Terminal 03**: No diretório 'service-somar' execute o comando:
+**Terminal 03**: No diretório `service-somar/` execute o comando:
 
 ```
 php -S localhost:8082
 ```
 
-**Terminal 04**: No diretório 'service-subtrair' execute o comando:
+**Terminal 04**: No diretório `service-subtrair/` execute o comando:
 
 ```
 php -S localhost:8083
 ```
 
-**Terminal 05**: No diretório 'service-multiplicar' execute o comando:
+**Terminal 05**: No diretório `service-multiplicar/` execute o comando:
 
 ```
 php -S localhost:8084
 ```
 
-**Terminal 06**: No diretório 'service-dividir' execute o comando:
+**Terminal 06**: No diretório `service-dividir/` execute o comando:
 
 ```
 php -S localhost:8085
@@ -58,7 +58,7 @@ Utilize o aplicativo [Insomnia](https://insomnia.rest/download/) ou [Postman](ht
 | Multiplicar | http://localhost:8080/api-gateway/multiplicar/resultado |
 | Dividir     | http://localhost:8080/api-gateway/dividir/resultado     |
 
-###### Entradas
+### Entradas
 
 Os valores de entrada para realização dos cálculos dever ser informados no Body dos aplicativos seguindo a estrutura abaixo:
 
@@ -71,7 +71,7 @@ Os valores de entrada para realização dos cálculos dever ser informados no Bo
 
 Nota: Os valores podem ser alterados.
 
-###### Saídas
+### Saídas
 
 Para a entrada acima utilizada como exemplo temos as seguintes saídas de acordo com a função que utilizar:
 
