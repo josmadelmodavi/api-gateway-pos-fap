@@ -1,0 +1,7 @@
+{
+    "name": "microsservice/dividir",
+    "description": "Microsservice Dividir",
+    "require": {
+        "slim/slim": "3.*"
+    }
+}

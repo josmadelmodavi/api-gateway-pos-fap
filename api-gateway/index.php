@@ -107,5 +107,35 @@ $app->group("/multiplicar", function () use ($app) {
     });
 });
 
+/* DIVIDIR */
+$app->group("/dividir", function () use ($app) {
+
+    $app->post("[/{params:.*}]", function (Request $request, Response $response, $args) {
+
+        if (!empty($args["params"]) && $args["params"] == "resultado") {
+            $novaRota = "operacao";
+            $url = "http://localhost/api-gateway-pos-fap/service-dividir/{$novaRota}";
+
+            $valorA = $request->getParsedBody()["valorA"];
+            $valorB = $request->getParsedBody()["valorB"];
+
+            $config = curl_init($url);
+            curl_setopt($config, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($config, CURLOPT_POST, true);
+            curl_setopt($config, CURLOPT_POSTFIELDS, array(
+                "valorA" => $valorA,
+                "valorB" => $valorB
+            ));
+
+            $resposta = curl_exec($config);
+            curl_close($config);
+
+            return $response->withJson(
+                json_decode($resposta, true)
+            );
+        }
+    });
+});
+
 /* START */
 $app->run();
