@@ -1,0 +1,7 @@
+{
+    "name": "microsservice/subtrair",
+    "description": "Microsservice Subtrair",
+    "require": {
+        "slim/slim": "3.*"
+    }
+}
