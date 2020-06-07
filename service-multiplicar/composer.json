@@ -1,0 +1,7 @@
+{
+    "name": "microsservice/multiplicar",
+    "description": "Microsservice Multiplicar",
+    "require": {
+        "slim/slim": "3.*"
+    }
+}
