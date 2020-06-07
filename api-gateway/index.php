@@ -24,7 +24,8 @@ $app->group("/somar", function () use ($app) {
 
         if (!empty($args["params"]) && $args["params"] == "resultado") {
             $novaRota = "operacao";
-            $url = "http://localhost/api-gateway-pos-fap/service-somar/{$novaRota}";
+            // $url = "http://localhost/api-gateway-pos-fap/service-somar/{$novaRota}";
+            $url = "http://localhost:8082/{$novaRota}";
 
             $valorA = $request->getParsedBody()["valorA"];
             $valorB = $request->getParsedBody()["valorB"];
@@ -54,7 +55,8 @@ $app->group("/subtrair", function () use ($app) {
 
         if (!empty($args["params"]) && $args["params"] == "resultado") {
             $novaRota = "operacao";
-            $url = "http://localhost/api-gateway-pos-fap/service-subtrair/{$novaRota}";
+            // $url = "http://localhost/api-gateway-pos-fap/service-subtrair/{$novaRota}";
+            $url = "http://localhost:8083/{$novaRota}";
 
             $valorA = $request->getParsedBody()["valorA"];
             $valorB = $request->getParsedBody()["valorB"];
@@ -84,7 +86,8 @@ $app->group("/multiplicar", function () use ($app) {
 
         if (!empty($args["params"]) && $args["params"] == "resultado") {
             $novaRota = "operacao";
-            $url = "http://localhost/api-gateway-pos-fap/service-multiplicar/{$novaRota}";
+            // $url = "http://localhost/api-gateway-pos-fap/service-multiplicar/{$novaRota}";
+            $url = "http://localhost:8084/{$novaRota}";
 
             $valorA = $request->getParsedBody()["valorA"];
             $valorB = $request->getParsedBody()["valorB"];
@@ -114,7 +117,8 @@ $app->group("/dividir", function () use ($app) {
 
         if (!empty($args["params"]) && $args["params"] == "resultado") {
             $novaRota = "operacao";
-            $url = "http://localhost/api-gateway-pos-fap/service-dividir/{$novaRota}";
+            // $url = "http://localhost/api-gateway-pos-fap/service-dividir/{$novaRota}";
+            $url = "http://localhost:8085/{$novaRota}";
 
             $valorA = $request->getParsedBody()["valorA"];
             $valorB = $request->getParsedBody()["valorB"];

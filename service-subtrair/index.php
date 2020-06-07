@@ -24,7 +24,8 @@ $app->post("/operacao", function (Request $request, Response $response, $args) {
     $valorB = $body["valorB"] ?? null;
 
     $novaRota = "validar";
-    $url = "http://localhost/api-gateway-pos-fap/service-validar/{$novaRota}";
+    // $url = "http://localhost/api-gateway-pos-fap/service-validar/{$novaRota}";
+    $url = "http://localhost:8081/{$novaRota}";
 
     $config = curl_init($url);
     curl_setopt($config, CURLOPT_RETURNTRANSFER, true);
