@@ -23,6 +23,28 @@ $app->post("/operacao", function (Request $request, Response $response, $args) {
     $valorA = $body["valorA"] ?? null;
     $valorB = $body["valorB"] ?? null;
 
+    $novaRota = "validar";
+    $url = "http://localhost/api-gateway-pos-fap/service-validar/{$novaRota}";
+
+    $config = curl_init($url);
+    curl_setopt($config, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($config, CURLOPT_POST, true);
+    curl_setopt($config, CURLOPT_POSTFIELDS, array(
+        "valorA" => $valorA,
+        "valorB" => $valorB
+    ));
+
+    $resposta = curl_exec($config);
+    curl_close($config);
+
+    $array = json_decode($resposta, true);
+
+    if (empty($array["resultado"])) {
+        return $response->withStatus(500)->withJson([
+            "erro" => $array["erro"]
+        ]);
+    }
+
     $resultado = $valorA + $valorB;
 
     return $response->withStatus(200)->withJson([

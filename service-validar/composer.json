@@ -1,0 +1,7 @@
+{
+    "name": "microsservice/validar",
+    "description": "Microsservice Validar",
+    "require": {
+        "slim/slim": "3.*"
+    }
+}

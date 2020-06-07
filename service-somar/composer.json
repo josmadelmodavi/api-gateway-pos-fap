@@ -1,4 +1,6 @@
 {
+    "name": "microsservice/somar",
+    "description": "Microsservice Somar",
     "require": {
         "slim/slim": "3.*"
     }

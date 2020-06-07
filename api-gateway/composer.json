@@ -1,4 +1,6 @@
 {
+    "name": "api/gateway",
+    "description": "API Gateway",
     "require": {
         "slim/slim": "3.*"
     }
