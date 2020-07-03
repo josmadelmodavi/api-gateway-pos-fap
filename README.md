@@ -107,8 +107,8 @@ Mensagens de erros:
 
 ## Informações da Pós-Graduação
 
-- Instituição: Faculdade Paraíso do Ceará
+- Instituição: [Centro Universitário Paraíso - UniFAP](https://www.fapce.edu.br)
 - Pós-Graduação: Desenvolvimento Web
 - Disciplina: Serviços Web (Mód. 14)
-- Data: 30 e 31 de maio de 2020
+- Data: 25 e 26 de maio de 2020
 - Professor: [Paulo Weverton](https://github.com/pauloweverton)
